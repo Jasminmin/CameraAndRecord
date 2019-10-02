@@ -14,14 +14,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lf-fl-1aR">
+                                <rect key="frame" x="140" y="372" width="95" height="41"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <state key="normal" title="File_Detail"/>
+                                <connections>
+                                    <segue destination="bzy-n0-I42" kind="show" id="Rti-L8-Te9"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-qq-7Li">
+                                <rect key="frame" x="110" y="172" width="155" height="156"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.39153890509052014" green="0.42839839565012755" blue="0.47559725209541126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="90"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="0.74944561719894409" green="0.79666918516159058" blue="0.84821921586990356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tbU-qq-7Li" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="95r-h4-i7b"/>
+                            <constraint firstItem="3Lf-fl-1aR" firstAttribute="top" secondItem="tbU-qq-7Li" secondAttribute="bottom" constant="44" id="XsE-cK-YpS"/>
+                            <constraint firstItem="3Lf-fl-1aR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="duB-NT-U2Q"/>
+                            <constraint firstItem="tbU-qq-7Li" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="hfM-93-fhQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Lf-fl-1aR" secondAttribute="bottom" constant="205" id="ntb-YI-kr2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tbU-qq-7Li" secondAttribute="trailing" constant="110" id="qcy-zd-Xeg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Files" image="film.fill" catalog="system" id="ziJ-P0-DBR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-270"/>
+            <point key="canvasLocation" x="1012" y="-556.37181409295351"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qlW-d1-acu">
+            <objects>
+                <viewController id="bzy-n0-I42" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0cG-9C-I4L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J7w-x7-uSM">
+                                <rect key="frame" x="67" y="259" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" red="0.3915389051" green="0.42839839569999999" blue="0.47559725209999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="90"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2VI-Wf-hcb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4w1-N8-rS8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHo-YU-FHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="-556"/>
         </scene>
         <!--Record-->
         <scene sceneID="hBy-ou-sOn">
@@ -30,14 +81,25 @@
                     <view key="view" contentMode="scaleToFill" id="HhH-rG-Ne1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWr-hp-P1P">
+                                <rect key="frame" x="134.5" y="313" width="106" height="41"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <state key="normal" title="Btn_Record"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.8784313725490196" green="0.89803921568627454" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vWr-hp-P1P" firstAttribute="centerY" secondItem="HhH-rG-Ne1" secondAttribute="centerY" id="34G-TM-XLl"/>
+                            <constraint firstItem="vWr-hp-P1P" firstAttribute="centerX" secondItem="HhH-rG-Ne1" secondAttribute="centerX" id="kli-mI-34v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EGg-Kj-gna"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" image="speaker.3.fill" catalog="system" id="9us-Fp-JeD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3Z-za-qka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="556"/>
+            <point key="canvasLocation" x="1012" y="817"/>
         </scene>
         <!--Camera-->
         <scene sceneID="rZt-Wa-llv">
@@ -46,14 +108,25 @@
                     <view key="view" contentMode="scaleToFill" id="Fj9-eg-T4R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXI-NH-Nwc">
+                                <rect key="frame" x="132" y="313" width="111" height="41"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <state key="normal" title="Btn_Camera"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.79682791233062744" green="0.74985462427139282" blue="0.83368808031082153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZXI-NH-Nwc" firstAttribute="centerY" secondItem="Fj9-eg-T4R" secondAttribute="centerY" id="rOt-QG-lQM"/>
+                            <constraint firstItem="ZXI-NH-Nwc" firstAttribute="centerX" secondItem="Fj9-eg-T4R" secondAttribute="centerX" id="zlg-zK-BJw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tJA-5K-So5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera.fill" catalog="system" id="pgh-1m-1hH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQP-Ez-hXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="130"/>
+            <point key="canvasLocation" x="1012" y="130"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="epu-Mo-knG">
@@ -61,6 +134,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dYu-CG-qVv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f21-ic-ReA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
