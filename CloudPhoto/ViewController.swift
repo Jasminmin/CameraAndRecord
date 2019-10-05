@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var fileNumLabel: UILabel!
+    var FileNum: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func showFileDetail(_ sender: Any) {
+    }
+    
 }
 
