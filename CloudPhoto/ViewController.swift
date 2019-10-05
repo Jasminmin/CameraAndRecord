@@ -18,7 +18,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showFileDetail(_ sender: Any) {
+        self.performSegue(withIdentifier: "showNumSegue", sender: nil)
+        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNumSegue" {
+            let showVC = segue.destination as! ShowItemViewController
+            showVC.ShowNum = fileNumLabel.text!
+        }
+    }
 }
 

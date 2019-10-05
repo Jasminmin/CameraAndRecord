@@ -10,11 +10,15 @@ import UIKit
 
 class ShowItemViewController: UIViewController {
 
+    @IBOutlet weak var showNumLabel: UILabel!
+    var ShowNum: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        showNumLabel.text = ShowNum
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

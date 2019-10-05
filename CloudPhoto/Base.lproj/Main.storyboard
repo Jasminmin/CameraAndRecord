@@ -21,7 +21,7 @@
                                 <state key="normal" title="File_Detail"/>
                                 <connections>
                                     <action selector="showFileDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSY-3W-ceX"/>
-                                    <segue destination="bzy-n0-I42" kind="show" id="Rti-L8-Te9"/>
+                                    <segue destination="bzy-n0-I42" kind="show" identifier="showNumSegue" id="Rti-L8-Te9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84J-kO-Lbz">
@@ -73,6 +73,9 @@
                         <viewLayoutGuide key="safeArea" id="2VI-Wf-hcb"/>
                     </view>
                     <navigationItem key="navigationItem" id="4w1-N8-rS8"/>
+                    <connections>
+                        <outlet property="showNumLabel" destination="hwC-3K-kJz" id="GcW-z7-Xyv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHo-YU-FHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
