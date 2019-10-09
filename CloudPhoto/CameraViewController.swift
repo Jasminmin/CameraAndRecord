@@ -22,6 +22,7 @@ class CameraViewController: UIViewController {
     override var prefersStatusBarHidden: Bool { return true }
     
     override func viewDidLoad() {
+        
         func configureCameraController() {
             cameraController.prepare {(error) in if let error = error {
                 print(error)
@@ -79,19 +80,11 @@ class CameraViewController: UIViewController {
             }
             try? PHPhotoLibrary.shared().performChangesAndWait {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
+                print("Photo taked!")
             }
         }
     }
     
-    
-    // button that send value to ViewController
-//    @IBAction func takeFileBtn(_ sender: Any) {
-//        if let ViewController = self.tabBarController?.viewControllers?[0] as? ViewController{
-//            ViewController.FileNum = ViewController.FileNum + 1
-//            ViewController.fileNumLabel.text = String(ViewController.FileNum)
-//        }
-//    }
-//
     
     /*
     // MARK: - Navigation
