@@ -19,6 +19,7 @@
 		B3B2CE6D234B0C44001C08D3 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2CE6C234B0C44001C08D3 /* CameraController.swift */; };
 		B3B2CE6F234B161F001C08D3 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B3B2CE6E234B161F001C08D3 /* circle.png */; };
 		B3DFA04F234C19C700EB6308 /* double_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFA04E234C19C700EB6308 /* double_circle.png */; };
+		B3DFA07F234DBE0700EB6308 /* FileNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFA07E234DBE0700EB6308 /* FileNameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B3B2CE6C234B0C44001C08D3 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		B3B2CE6E234B161F001C08D3 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../Photoshop/Impho/circle.png; sourceTree = "<group>"; };
 		B3DFA04E234C19C700EB6308 /* double_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = double_circle.png; path = ../../../Photoshop/Impho/double_circle.png; sourceTree = "<group>"; };
+		B3DFA07E234DBE0700EB6308 /* FileNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				B3B2CE2723486FE7001C08D3 /* RecordViewController.swift */,
 				B3B2CE2923487014001C08D3 /* ShowItemViewController.swift */,
 				B3B2CE6C234B0C44001C08D3 /* CameraController.swift */,
+				B3DFA07E234DBE0700EB6308 /* FileNameController.swift */,
 			);
 			path = CloudPhoto;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DFA07F234DBE0700EB6308 /* FileNameController.swift in Sources */,
 				B3B2CE2A23487014001C08D3 /* ShowItemViewController.swift in Sources */,
 				B3B2CE0E23443F42001C08D3 /* ViewController.swift in Sources */,
 				B3B2CE6D234B0C44001C08D3 /* CameraController.swift in Sources */,

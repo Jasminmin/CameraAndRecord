@@ -16,11 +16,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        var dstPhoto, dstVoice: String
         let fileManager = FileManager.default
         let path = NSHomeDirectory() + "/Documents"
-        dstPhoto = path + "/photo"
-        dstVoice = path + "/voice"
+        let dstPhoto: String = path + "/photo"
+        let dstVoice: String = path + "/voice"
         
         //確認相片資料夾是否存在
         if fileManager.fileExists(atPath: dstPhoto){return}
