@@ -16,6 +16,9 @@
 		B3B2CE2623486FDA001C08D3 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2CE2523486FDA001C08D3 /* CameraViewController.swift */; };
 		B3B2CE2823486FE7001C08D3 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2CE2723486FE7001C08D3 /* RecordViewController.swift */; };
 		B3B2CE2A23487014001C08D3 /* ShowItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2CE2923487014001C08D3 /* ShowItemViewController.swift */; };
+		B3B2CE6D234B0C44001C08D3 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2CE6C234B0C44001C08D3 /* CameraController.swift */; };
+		B3B2CE6F234B161F001C08D3 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B3B2CE6E234B161F001C08D3 /* circle.png */; };
+		B3DFA04F234C19C700EB6308 /* double_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFA04E234C19C700EB6308 /* double_circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		B3B2CE2723486FE7001C08D3 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		B3B2CE2923487014001C08D3 /* ShowItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowItemViewController.swift; sourceTree = "<group>"; };
 		B3B2CE4B2348711E001C08D3 /* CloudPhoto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudPhoto.entitlements; sourceTree = "<group>"; };
+		B3B2CE6C234B0C44001C08D3 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		B3B2CE6E234B161F001C08D3 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../Photoshop/Impho/circle.png; sourceTree = "<group>"; };
+		B3DFA04E234C19C700EB6308 /* double_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = double_circle.png; path = ../../../Photoshop/Impho/double_circle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 		B3B2CE0823443F42001C08D3 /* CloudPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				B3DFA04E234C19C700EB6308 /* double_circle.png */,
+				B3B2CE6E234B161F001C08D3 /* circle.png */,
 				B3B2CE4B2348711E001C08D3 /* CloudPhoto.entitlements */,
 				B3B2CE0923443F42001C08D3 /* AppDelegate.swift */,
 				B3B2CE0B23443F42001C08D3 /* SceneDelegate.swift */,
@@ -74,6 +82,7 @@
 				B3B2CE2523486FDA001C08D3 /* CameraViewController.swift */,
 				B3B2CE2723486FE7001C08D3 /* RecordViewController.swift */,
 				B3B2CE2923487014001C08D3 /* ShowItemViewController.swift */,
+				B3B2CE6C234B0C44001C08D3 /* CameraController.swift */,
 			);
 			path = CloudPhoto;
 			sourceTree = "<group>";
@@ -139,6 +148,8 @@
 				B3B2CE1623443F43001C08D3 /* LaunchScreen.storyboard in Resources */,
 				B3B2CE1323443F43001C08D3 /* Assets.xcassets in Resources */,
 				B3B2CE1123443F42001C08D3 /* Main.storyboard in Resources */,
+				B3DFA04F234C19C700EB6308 /* double_circle.png in Resources */,
+				B3B2CE6F234B161F001C08D3 /* circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +162,7 @@
 			files = (
 				B3B2CE2A23487014001C08D3 /* ShowItemViewController.swift in Sources */,
 				B3B2CE0E23443F42001C08D3 /* ViewController.swift in Sources */,
+				B3B2CE6D234B0C44001C08D3 /* CameraController.swift in Sources */,
 				B3B2CE2623486FDA001C08D3 /* CameraViewController.swift in Sources */,
 				B3B2CE2823486FE7001C08D3 /* RecordViewController.swift in Sources */,
 				B3B2CE0A23443F42001C08D3 /* AppDelegate.swift in Sources */,
