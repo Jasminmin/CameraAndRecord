@@ -80,16 +80,19 @@ class CameraViewController: UIViewController {
                 return
             }
             //存在原生相簿裡
-//            try? PHPhotoLibrary.shared().performChangesAndWait {
-//                PHAssetChangeRequest.creationRequestForAsset(from: image)
-//                print("Photo taked!")
-//            }
+            /*
+            try? PHPhotoLibrary.shared().performChangesAndWait {
+                PHAssetChangeRequest.creationRequestForAsset(from: image)
+                print("Photo taked!")
+            }
+            */
             let fileManager = FileManager.default
             let path = NSHomeDirectory() + "/Documents"
             let dstPhoto: String = path + "/photo"
-            let photoName = self.fileNameController.dateString() + ".png"
+            let photoName = self.fileNameController.dateString() + ".jpeg"
             let photoFile: String = dstPhoto + "/" + photoName
-            let storePhoto: NSData = image.pngData()! as NSData
+            //let storePhoto: NSData = image.pngData()! as NSData
+            let storePhoto = image.jpegData(compressionQuality: 1.0)!
             if fileManager.createFile(atPath: photoFile, contents: storePhoto as Data, attributes: nil){
                 print(photoName + " has been stroed.")
             }else{

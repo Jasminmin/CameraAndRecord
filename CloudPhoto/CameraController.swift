@@ -193,6 +193,7 @@ class CameraController: UIViewController {
      
         self.photoOutput?.capturePhoto(with: settings, delegate: self)
         self.photoCaptureCompletionBlock = completion
+
     }
     
     /*
@@ -207,15 +208,17 @@ class CameraController: UIViewController {
 
 }
 
+
 extension CameraController: AVCapturePhotoCaptureDelegate {
-    public func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Swift.Error?) {
-        if let error = error {self.photoCaptureCompletionBlock?(nil, error) }
-        else if let buffer = photoSampleBuffer, let data = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer:buffer, previewPhotoSampleBuffer: nil),
-        let image = UIImage(data: data) {
-            self.photoCaptureCompletionBlock?(image, nil)
-        }
-        else {
-            self.photoCaptureCompletionBlock?(nil, CameraControllerError.unknown)
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            if let image = UIImage(data: imageData){
+                self.photoCaptureCompletionBlock?(image, nil)
+            }else{
+                self.photoCaptureCompletionBlock?(nil, CameraControllerError.unknown)
+            }
         }
     }
 }
+ 
+
