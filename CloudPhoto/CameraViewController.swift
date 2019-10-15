@@ -12,8 +12,6 @@ import Photos
 class CameraViewController: UIViewController {
     @IBOutlet weak var captureButton: UIButton!
     @IBOutlet weak var capturePreviewView: UIView!
-    @IBOutlet weak var photoModeButton: UIButton!
-    @IBOutlet weak var videoModeButton: UIButton!
     @IBOutlet weak var toggleCameraButton: UIButton!
     @IBOutlet weak var toggleFlashButton: UIButton!
     

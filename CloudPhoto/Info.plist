@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>For take photos</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>For record voice</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>For save photos</string>
 	<key>UIApplicationSceneManifest</key>
