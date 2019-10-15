@@ -40,6 +40,7 @@ class RecordViewController: UIViewController {
         }
     }
     
+    // 載入buttonUI
     func loadRecordingUI() {
         recordButton = UIButton(frame: CGRect(x: 153, y: 512, width: 68, height: 68))
         recordButton.setImage(#imageLiteral(resourceName: "record"), for: .normal)
@@ -49,10 +50,12 @@ class RecordViewController: UIViewController {
         listenView.image = UIImage(named: "listen.png")
     }
     
+    // 開始錄音
     func startRecording() {
+        // 檔案命名
         let audioFilename = getDocumentsDirectory().appendingPathComponent("voice/" + fileNameController.dateString() + ".m4a")
         print(fileNameController.dateString() + ".m4a" + " has been recorded.")
-
+        
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
@@ -61,6 +64,7 @@ class RecordViewController: UIViewController {
         ]
 
         do {
+            //儲存檔案
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.delegate = self as? AVAudioRecorderDelegate
             audioRecorder.record()
@@ -72,11 +76,13 @@ class RecordViewController: UIViewController {
         }
     }
     
+    // 取得App中資料夾路徑
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
     
+    // 完成錄音
     func finishRecording(success: Bool) {
         audioRecorder.stop()
         audioRecorder = nil
@@ -84,6 +90,7 @@ class RecordViewController: UIViewController {
         if success {
             recordButton.setImage(#imageLiteral(resourceName: "record"), for: .normal)
             listenView.image = UIImage(named: "listen.png")
+            print(fileNameController.dateString() + ".m4a" + " has been saved.")
         } else {
             recordButton.setImage(#imageLiteral(resourceName: "record"), for: .normal)
             listenView.image = UIImage(named: "listen.png")
@@ -91,6 +98,7 @@ class RecordViewController: UIViewController {
         }
     }
     
+    // 切換按鈕觸發func
     @objc func recordTapped() {
         if audioRecorder == nil {
             startRecording()
@@ -99,6 +107,7 @@ class RecordViewController: UIViewController {
         }
     }
     
+    // 當遇到來電時終止錄音
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
             finishRecording(success: false)
